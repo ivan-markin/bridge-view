@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
-  <link rel="stylesheet" href="./css/style.min.css?_v=20221209194404">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20221214115936">
   <title>Bridge — Transfers</title>
 </head>
 
@@ -485,7 +485,7 @@
 		</div>				
 	</div>
 </div>  
-  <div class="choose-wallet-popup popup" id="chooseWalletPopup">
+  <div class="choose-wallet-popup popup active" id="chooseWalletPopup">
 	<div class="popup__container">
 		<a class="popup__close" href="#"></a>
 		<h1 class="choose-wallet-popup__title popup__title">Connect to a Wallet</h1>
@@ -1141,22 +1141,20 @@
 				</li>
 			</ul>
 		</nav>
-		<!-- <button class="search-button"></button> -->
-		<!-- <input class="header__search" type="text" placeholder="Search"> -->
-		<button class="header__cta btn btn_middle">Connect to a wallet</button>
-		<!-- <a class="wallet-info-button">
+		
+		<!-- <button class="header__cta btn btn_middle">Connect to a wallet</button> -->
+		<a class="wallet-info-button">
 			<div class="wallet-info-button__logo">
 				<picture><source srcset="img/metamask-logo.webp" type="image/webp"><img class="wallet-info-button__main-logo" src="img/metamask-logo.png" alt=""></picture>
 				<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img class="wallet-info-button__network-logo" src="img/tokens-logos/network.png" alt=""></picture>
 			</div>
 			<div class="wallet-info-button__wallet-num">
 				<div>
-					<span class="wallet-info-button__num">0x07A0...B57F</span>
-					<span class="wallet-info-button__network">Etherium Network</span>
+					<span class="wallet-info-button__num">0x07A0...B57F</span>					
 				</div>
-				<img src="img/wallet-icon.svg" alt="">
+				<img src="img/wallet-icon_dark.svg" alt="">
 			</div>
-		</a> -->
+		</a>
 	</div>      	
 </header> 
 
@@ -1206,7 +1204,157 @@
 		<div class="transfers__content">
 	<div class="transfers__supported">
 		<span class="transfers__supported-title">
-			Supported <span>10</span> bridges, <span>16</span> protocols and <span>2</span> routes				
+			Supported
+			<span class="tooltip-cnt">
+				12
+				<div class="tooltip-popup tooltip-popup_white">
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/connext.svg" width="24" height="24" alt="">
+						<span>Connext</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/symbiosis.svg" width="24" height="24" alt="">
+						<span>Symbiosis</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/hop.svg" width="24" height="24" alt="">
+						<span>Hop</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/cBridge.svg" width="24" height="24" alt="">
+						<span>cBridge</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/multichain.svg" width="24" height="24" alt="">
+						<span>Multichain</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/polygon.svg" width="24" height="24" alt="">
+						<span>Polygon</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/avalanche.svg" width="24" height="24" alt="">
+						<span>Avalanche Bridge</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/optimism.svg" width="24" height="24" alt="">
+						<span>Optimism Gateway</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/arbitrum.svg" width="24" height="24" alt="">
+						<span>Arbitrum Bridge</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/across.svg" width="24" height="24" alt="">
+						<span>Across</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/stargate.svg" width="24" height="24" alt="">
+						<span>Stargate</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/bridges/biconomy.svg" width="24" height="24" alt="">
+						<span>Biconomy</span>
+					</div>
+				</div>
+			</span> 
+			bridges, 
+			<span class="tooltip-cnt">
+				19
+				<div class="tooltip-popup tooltip-popup_white">
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/ethereum-24x24.svg" width="24" height="24" alt="">
+						<span>Ethereum</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/Polygon.svg" width="24" height="24" alt="">
+						<span>Polygon</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/bsc-24x24.svg" width="24" height="24" alt="">
+						<span>BSC</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/Arbitrum One-24x24.svg" width="24" height="24" alt="">
+						<span>Arbitrum One</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/avalanche-avax-logo 1.svg" width="24" height="24" alt="">
+						<span>Avalanche</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/Celo-24x24.svg" width="24" height="24" alt="">
+						<span>Fantom</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/telos-24x24.svg" width="24" height="24" alt="">
+						<span>Telos</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/boba-24x24.svg" width="24" height="24" alt="">
+						<span>Boba</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/Optimism-24x24.svg" width="24" height="24" alt="">
+						<span>Optimism</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/harmony-24x24.svg" width="24" height="24" alt="">
+						<span>Harmony</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/moonriver-24x24.svg" width="24" height="24" alt="">
+						<span>Moonriver</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/okxchain.svg" width="24" height="24" alt="">
+						<span>OKXChain</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/Moonbeam-24x24.svg" width="24" height="24" alt="">
+						<span>Moonbeam</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/aurora-24x24.svg" width="24" height="24" alt="">
+						<span>Aurora</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/evmos-24x24.svg" width="24" height="24" alt="">
+						<span>Evmos</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/fuse-24x24.svg" width="24" height="24" alt="">
+						<span>Fuse</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/cronos-24x24.svg" width="24" height="24" alt="">
+						<span>Cronos</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/Celo-24x24-1.svg" width="24" height="24" alt="">
+						<span>Gnosis</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/networks/Celo-24x24-2.svg" width="24" height="24" alt="">
+						<span>Celo</span>
+					</div>
+				</div>
+			</span> 
+			protocols and 
+			<span class="tooltip-cnt">
+				2
+				<div class="tooltip-popup tooltip-popup_white" style="width: fit-content; flex-wrap: nowrap;">
+					<div class="tooltip-popup__item">
+						<img src="../img/routes/lifi.svg" width="24" height="24" alt="">
+						<span>LI.FI</span>
+					</div>
+					<div class="tooltip-popup__item">
+						<img src="../img/routes/debridges.svg" width="24" height="24" alt="">
+						<span>DeBridges</span>
+					</div>					
+				</div>
+			</span> 
+			routes				
 		</span>			
 	</div>
 	<form class="transfers-form">
@@ -1471,7 +1619,7 @@
 </footer>   
   </div>  
 
-  <script src="./js/app.min.js?_v=20221209194404"></script>
+  <script src="./js/app.min.js?_v=20221214115936"></script>
 </body>
 
 </html>
