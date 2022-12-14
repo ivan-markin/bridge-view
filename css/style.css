@@ -11046,6 +11046,7 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   font-size: 12px;
   line-height: 1;
+  text-decoration: none;
   color: #142438;
   cursor: pointer;
   -webkit-transition: 0.1s all;

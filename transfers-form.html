@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
-  <link rel="stylesheet" href="./css/style.min.css?_v=20221214115936">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20221214121940">
   <title>Bridge — Transfers</title>
 </head>
 
@@ -485,27 +485,7 @@
 		</div>				
 	</div>
 </div>  
-  <div class="choose-wallet-popup popup active" id="chooseWalletPopup">
-	<div class="popup__container">
-		<a class="popup__close" href="#"></a>
-		<h1 class="choose-wallet-popup__title popup__title">Connect to a Wallet</h1>
-		<p class="choose-wallet-popup__description">
-			By connecting a wallet, you agree to <a class="text-link" href="">Terms&nbsp;of&nbsp;Service</a> and acknowledge that you have read and understand the <a class="text-link" href="">disclaimer</a>.
-		</p>     
-		<button class="choose-wallet-popup__wallet-item">
-			<span>Metamask</span>
-			<picture><source srcset="img/metamask-logo.webp" type="image/webp"><img src="img/metamask-logo.png" alt=""></picture>
-		</button>
-		<button class="choose-wallet-popup__wallet-item">
-			<span>BlockWallet</span>
-			<picture><source srcset="img/block-wallet-logo.webp" type="image/webp"><img src="img/block-wallet-logo.png" alt=""></picture>
-		</button>
-		<button class="choose-wallet-popup__wallet-item">
-			<span>imToken</span>
-			<picture><source srcset="img/im-token-logo.webp" type="image/webp"><img src="img/im-token-logo.png" alt=""></picture>
-		</button>
-	</div>
-</div>
+  
   <div class="search-popup popup" id="searchPopup">
 	<div class="popup__container">
 		<a class="popup__close"></a>
@@ -973,140 +953,6 @@
 	</div>
 </div>    
   
-  <!-- П Р О Ц Е С С И Н Г О В Ы Е  П О П А П Ы -->
-
-  <div class="transfer-approve-popup popup">
-	<div class="popup__container">
-		<a class="popup__close" href="#"></a>      
-		<h2 class="popup__title">Transfer Approve</h2>
-		<div class="transfer-approve-popup__token">
-			<picture><source srcset="img/tokens-logos/token.webp" type="image/webp"><img class="transfer-approve-popup__token-logo" src="img/tokens-logos/token.png" alt=""></picture>
-			<h3 class="transfer-approve-popup__token-title">USDT</h3>  
-		</div>  
-		<p class="popup__text">
-			Please approve USDT before you continue the cross-chain transfer.
-		</p>    
-	</div>
-</div>
-  <div class="allowance-popup popup popup_centered">
-	<div class="popup__container">
-		<a class="popup__close" href="#"></a>
-		<h2 class="popup__title">Allowance</h2>
-		<div class="popup__image">
-			<img src="img/processing-popups/allowed.svg" alt="">
-		</div>
-		<p class="popup__text">
-			Token USDT was successfully approved.<br>
-			Now you can proceed to transfer.
-		</p>
-		<button class="popup__cta">Got it</button>
-	</div>
-</div>
-  <div class="refused-popup popup popup_centered">
-	<div class="popup__container">
-		<a class="popup__close" href="#"></a>
-		<h2 class="popup__title">Refused</h2>
-		<div class="popup__image">
-			<img src="img/processing-popups/rejected.svg" alt="">
-		</div>
-		<p class="popup__text">
-			You have rejected the token approve.<br>
-			Please try again and give permission to spend<br>
-			your token to proceed the transfer.
-		</p>
-		<button class="popup__cta">Got it</button>
-	</div>
-</div>
-  <div class="rejected-popup popup popup_centered">
-	<div class="popup__container">
-		<a class="popup__close" href="#"></a>
-		<h2 class="popup__title">Rejected</h2>
-		<div class="popup__image">
-			<img src="img/processing-popups/rejected.svg" alt="">
-		</div>
-		<p class="popup__text">
-			Something went wrong. Try again.
-		</p>
-		<button class="popup__cta">Got it</button>
-	</div>
-</div>
-  <div class="transfer-submitted-popup popup popup_centered">
-	<div class="popup__container">
-		<a class="popup__close" href="#"></a>
-		<div class="popup__image">
-			<img src="img/processing-popups/rejected.svg" alt="">
-		</div>
-		<h2 class="popup__title">Transfer Submitted</h2>
-		<p class="popup__text">
-			Please allow 5-20 minutes for the funds to arrive<br>
-			at your wallet
-		</p>
-		<a class="external-link" href="">View on Etherscan</a>
-		<button class="popup__cta">Done</button>
-	</div>
-</div>
-  <div class="transfer-popup popup popup_centered" id="transferPopup">
-	<div class="popup__container">
-		<a class="popup__close" href="#"></a>      
-		<h2 class="popup__title">
-			Transfer
-		</h2>      
-		<div class="transfer-popup__transaction-path transaction-path">
-			<div class="transaction-path__item transaction-path__item_left">
-				<div class="transaction-path__item-container">
-					<div class="transaction-path__item-logo">
-						<picture><source srcset="img/tokens-logos/token.webp" type="image/webp"><img class="transaction-path__item-logo-main" src="img/tokens-logos/token.png" alt=""></picture>              
-					</div>
-					<h3 class="transaction-path__item-title">-5.000000 USDT</h3>
-					<span class="transfer-popup__item-subtitle transaction-path__item-subtitle">
-						<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img src="img/tokens-logos/network.png" alt=""></picture>
-						Ethereum Network
-					</span>
-				</div>
-			</div>
-			<div class="transaction-path__item transaction-path__item_right">
-				<div class="transaction-path__item-container">
-					<div class="transaction-path__item-logo">
-						<picture><source srcset="img/tokens-logos/token.webp" type="image/webp"><img class="transaction-path__item-logo-main" src="img/tokens-logos/token.png" alt=""></picture>              
-					</div>
-					<h3 class="transaction-path__item-title">+0.257202 AVAX</h3>
-					<span class="transfer-popup__item-subtitle transaction-path__item-subtitle">
-						<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img src="img/tokens-logos/network.png" alt=""></picture>
-						Avalanche Network
-					</span>
-				</div>
-			</div>        
-		</div>
-		<div class="transfer-popup__params">
-			<div class="transfer-popup__params-item">
-				<span class="transfer-popup__params-name">Bridge Rate</span>
-				<div  class="transfer-popup__rate-value">
-					<span>1 USDT on</span>
-					<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img src="img/tokens-logos/network.png" alt=""></picture>
-					<span>≈ 0.051493 AVAX on</span>
-					<span>AVAX on</span>
-					<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img src="img/tokens-logos/network.png" alt=""></picture>
-					<button class="transfer-popup__refresh-button refresh-button"></button>
-				</div>
-			</div>
-			<div class="transfer-popup__params-item">
-				<span class="transfer-popup__params-name">Fee</span>
-				<span class="transfer-popup__params-value">0.048561 AVAX</span>
-			</div>
-			<div class="transfer-popup__params-item">
-				<span class="transfer-popup__params-name">Slippage Tolerance</span>
-				<span class="transfer-popup__params-value">0.30%</span>
-			</div>
-			<div class="transfer-popup__params-item">
-				<span class="transfer-popup__params-name">Estimated Time of Transfer</span>
-				<span class="transfer-popup__params-value">5-20 minutes</span>
-			</div>
-		</div>
-	</div>
-</div>
-
-  <!-- --- -->
-  
   <div class="container">
     
     <header class="header header_inner">
@@ -1166,7 +1012,7 @@
             <div class="transfers-container">			
 	
 	<div class="transfers__tabs">
-	<a href="" class="transfers__tab active">
+	<a href="../transfers-form.html" class="transfers__tab active">
 		<span>
 			<svg width="20" height="20" viewBox="0 0 20 20" fill="#292D32" xmlns="http://www.w3.org/2000/svg">
 				<path d="M12.9167 13.1263C12.7667 13.1263 12.6 13.118 12.4417 13.1096C12.1333 13.093 11.8833 12.843 11.8583 12.5346C11.675 10.2096 9.78333 8.32629 7.46666 8.14296C7.15833 8.11796 6.90832 7.86798 6.89166 7.55964C6.88332 7.40131 6.875 7.24297 6.875 7.08464C6.875 3.7513 9.58333 1.04297 12.9167 1.04297C16.25 1.04297 18.9583 3.7513 18.9583 7.08464C18.9583 10.418 16.25 13.1263 12.9167 13.1263ZM8.125 6.96796C10.6083 7.40129 12.6 9.39297 13.0333 11.8763C15.625 11.8096 17.7083 9.69297 17.7083 7.08464C17.7083 4.44297 15.5583 2.29297 12.9167 2.29297C10.3167 2.29297 8.19167 4.37629 8.125 6.96796Z"/>
@@ -1177,7 +1023,7 @@
 			Transfer
 		</span>
 	</a>
-	<a href="" class="transfers__tab">
+	<a href="../transfers-history.html" class="transfers__tab ">
 		<span>
 			<svg width="20" height="20" viewBox="0 0 20 20" fill="#292D32" xmlns="http://www.w3.org/2000/svg">
 				<path d="M9.99935 18.9596C5.05768 18.9596 1.04102 14.943 1.04102 10.0013C1.04102 5.05964 5.05768 1.04297 9.99935 1.04297C14.941 1.04297 18.9577 5.05964 18.9577 10.0013C18.9577 14.943 14.941 18.9596 9.99935 18.9596ZM9.99935 2.29297C5.74935 2.29297 2.29102 5.7513 2.29102 10.0013C2.29102 14.2513 5.74935 17.7096 9.99935 17.7096C14.2494 17.7096 17.7077 14.2513 17.7077 10.0013C17.7077 5.7513 14.2494 2.29297 9.99935 2.29297Z"/>
@@ -1186,7 +1032,7 @@
 			History
 		</span>
 	</a>
-	<a href="" class="transfers__tab">
+	<a href="../transfers-faq.html" class="transfers__tab ">
 		<span>
 			<svg width="20" height="20" viewBox="0 0 20 20" fill="#292D32" xmlns="http://www.w3.org/2000/svg">
 				<path d="M12.9167 13.1263C12.7667 13.1263 12.6 13.118 12.4417 13.1096C12.1333 13.093 11.8833 12.843 11.8583 12.5346C11.675 10.2096 9.78333 8.32629 7.46666 8.14296C7.15833 8.11796 6.90832 7.86798 6.89166 7.55964C6.88332 7.40131 6.875 7.24297 6.875 7.08464C6.875 3.7513 9.58333 1.04297 12.9167 1.04297C16.25 1.04297 18.9583 3.7513 18.9583 7.08464C18.9583 10.418 16.25 13.1263 12.9167 13.1263ZM8.125 6.96796C10.6083 7.40129 12.6 9.39297 13.0333 11.8763C15.625 11.8096 17.7083 9.69297 17.7083 7.08464C17.7083 4.44297 15.5583 2.29297 12.9167 2.29297C10.3167 2.29297 8.19167 4.37629 8.125 6.96796Z"/>
@@ -1619,7 +1465,7 @@
 </footer>   
   </div>  
 
-  <script src="./js/app.min.js?_v=20221214115936"></script>
+  <script src="./js/app.min.js?_v=20221214121940"></script>
 </body>
 
 </html>
