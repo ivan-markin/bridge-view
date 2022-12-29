@@ -6,41 +6,46 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
-  <link rel="stylesheet" href="./css/style.min.css?_v=20221214122319">
+  <link rel="stylesheet" href="./css/style.min.css?_v=20221229180128">
   <title>Bridge — Transfers</title>
 </head>
 
 <body>
   
   <div class="mobile-menu">    
-	<a class="mobile-menu__logo" href="">
-		<img src="img/debridges-logo_white.svg" alt="">
-	</a>
-	<input class="mobile-menu__search" type="text" placeholder="Search">
-	<button class="mobile-menu__cta btn btn_middle btn_outlined">Connect to a wallet</button>
+	<div class="mobile-menu__header">
+		<a class="mobile-menu__logo" href="">
+			<img src="img/debridges-logo_dark.svg" alt="">
+		</a>
+		<button class="mobile-menu__close-btn"></button>
+	</div>			
 	<nav class="mobile-menu__menu main-menu">
 		<ul>
-			<li class="main-menu__item">
-				<a class="main-menu__item-link" href="">Finding a bridge</a>
+			<li class="main-menu__item active">
+				<a class="main-menu__item-link" href="">Transfers</a>
 			</li>
 			<li class="main-menu__item">
-				<a class="main-menu__item-link" href="">Analytics</a>
+				<a class="main-menu__item-link" href="">Bridges</a>
 			</li>
 			<li class="main-menu__item">
-				<a class="main-menu__item-link" href="">Networks</a>
+				<a class="main-menu__item-link" href="">
+					<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M22.0002 11.4809V13.541C22.0002 14.091 21.5602 14.5409 21.0002 14.5609H19.0402C17.9602 14.5609 16.9702 13.7709 16.8802 12.6909C16.8202 12.0609 17.0602 11.4709 17.4802 11.0609C17.8502 10.6809 18.3602 10.4609 18.9202 10.4609H21.0002C21.5602 10.4809 22.0002 10.9309 22.0002 11.4809Z" stroke="#142438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M2 11.0078V9.00781C2 6.28781 3.64 4.38781 6.19 4.06781C6.45 4.02781 6.72 4.00781 7 4.00781H16C16.26 4.00781 16.51 4.0178 16.75 4.0578C19.33 4.3578 21 6.26781 21 9.00781V10.4578H18.92C18.36 10.4578 17.85 10.6778 17.48 11.0578C17.06 11.4678 16.82 12.0578 16.88 12.6878C16.97 13.7678 17.96 14.5578 19.04 14.5578H21V16.0078C21 19.0078 19 21.0078 16 21.0078H13.5" stroke="#142438" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M3.80644 17.8084H5.73769V22.3084C5.73769 23.3584 6.30644 23.5709 7.00019 22.7834L11.7314 17.4084C12.3127 16.7521 12.0689 16.2084 11.1877 16.2084H9.25644V11.7084C9.25644 10.6584 8.68769 10.4459 7.99394 11.2334L3.26269 16.6084C2.68769 17.2709 2.93144 17.8084 3.80644 17.8084Z" stroke="#142438" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>							
+					Gas station
+				</a>
 			</li>
-			<li class="main-menu__item main-menu__item_marked">
-				<a class="main-menu__item-link" href="">Cashback</a>
+			<li class="main-menu__item main-menu__item_soon main-menu__item_disabled">
+				<a class="main-menu__item-link">Networks</a>
 			</li>
-			<li class="main-menu__item main-menu__item_disabled main-menu__item_soon">
+			<li class="main-menu__item main-menu__item_new main-menu__item_disabled">
 				<a class="main-menu__item-link">Reports</a>
-			</li>       
-			<li class="main-menu__item">
-				<a class="main-menu__item-link" href="">More</a>
 			</li>
 		</ul>
-	</nav>  
-	<button class="mobile-menu__close-btn"></button>  
+	</nav>	
+	<button class="mobile-menu__cta btn btn_primary">Connect wallet</button>
 </div>
   <div class="filters-mobile-panel">
 	<div class="filters-mobile-panel__header">
@@ -485,7 +490,40 @@
 		</div>				
 	</div>
 </div>  
-  
+  <div class="choose-wallet-popup popup" id="chooseWalletPopup">
+	<div class="popup__container">
+		<a class="popup__close" href="#"></a>
+		<h1 class="choose-wallet-popup__title popup__title">Connect to a Wallet</h1>		
+		
+		<!-- Loader -->
+		
+		<!-- <div class="choose-wallet-popup__loading">
+			<span class="loader-large"></span>
+			<span>Loading...</span>
+		</div> -->
+
+		<!--  -->
+		
+		<button class="choose-wallet-popup__wallet-item">
+			<div class="choose-wallet-popup__wallet-item-title">
+				<picture><source srcset="img/metamask-logo.webp" type="image/webp"><img src="img/metamask-logo.png" alt=""></picture>
+				<span>Metamask</span>				
+			</div>			
+		</button>
+		<button class="choose-wallet-popup__wallet-item">
+			<div class="choose-wallet-popup__wallet-item-title">
+				<picture><source srcset="img/block-wallet-logo.webp" type="image/webp"><img src="img/block-wallet-logo.png" alt=""></picture>
+				<span>BlockWallet</span>	
+			</div>					
+		</button>
+		<button class="choose-wallet-popup__wallet-item">
+			<div class="choose-wallet-popup__wallet-item-title">
+				<picture><source srcset="img/im-token-logo.webp" type="image/webp"><img src="img/im-token-logo.png" alt=""></picture>
+				<span>imToken</span>				
+			</div>			
+		</button>
+	</div>
+</div>
   <div class="search-popup popup" id="searchPopup">
 	<div class="popup__container">
 		<a class="popup__close"></a>
@@ -533,16 +571,22 @@
   <div class="wallet-actions-popup popup" id="walletActionsPopup">
 	<div class="popup__container">
 		<a class="popup__close" href="#"></a>
-		<picture><source srcset="img/metamask-logo-large.webp" type="image/webp"><img class="wallet-actions-popup__logo" src="img/metamask-logo-large.png" alt=""></picture>
+		<div class="wallet-actions-popup__logo">
+			<picture><source srcset="img/metamask-logo-large.webp" type="image/webp"><img class="wallet-actions-popup__logo-wallet" src="img/metamask-logo-large.png" alt=""></picture>
+			<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img class="wallet-actions-popup__logo-network" src="img/tokens-logos/network.png" alt=""></picture>
+		</div>
+		
 		<h1 class="wallet-actions-popup__title popup__title">Metamask</h1>
-		<div class="wallet-actions-popup__copy-field">
-			<span>0x07A0...B57F</span>
-			<button class="copy-button"></button>
-		</div>
-		<div class="wallet-actions-popup__balance">
-			<span>8.531 МАTIC</span>
-			<img src="img/wallet-icon_blue.svg" alt="">
-		</div>
+		<div class="wallet-actions-popup__wallet-info">
+			<div class="wallet-actions-popup__copy-field">
+				<span>0x07A0...B57F</span>
+				<button class="copy-button"></button>
+			</div>
+			<div class="wallet-actions-popup__balance">
+				<span>8.531 МАTIC</span>
+				<img src="img/wallet-icon_blue.svg" alt="">
+			</div>
+		</div>		
 		<!-- <span class="wallet-actions-popup__copied">
 			Copied
 			<img src="img/copied.svg" alt="">
@@ -639,7 +683,109 @@
 					</a>
 				</div>
 			</div>
-			<button class="btn btn_middle btn_outlined-red">Disconnect</button>
+			<button class="wallet-actions-popup__switch-network">
+				<img src="img/exchange-arrows.svg" alt="">
+				Switch network
+			</button>
+
+			<div class="switch-network-popup inner-popup">
+				<div class="switch-network-popup__header">
+					<button class="switch-network-popup__back popup-back-btn inner-popup-close">Back</button>
+					<h2 class="switch-network-popup__title popup__title">Switch network</h2>
+					<button class="switch-network-popup__close inner-popup-close"></button>
+				</div>
+				<div class="switch-network-popup__networks-list">
+					<a class="select__item select__item_active" href="">
+						<span class="select__item-logo">
+							<img src="img/currencies-logos/eth.svg" alt="">
+						</span>
+						<span class="select__item-name">Etherium</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<img src="img/currencies-logos/bnb.svg" alt="">
+						</span>
+						<span class="select__item-name">BSC</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<img src="img/currencies-logos/polygon.svg" alt="">
+						</span>
+						<span class="select__item-name">Polygon</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<img src="img/currencies-logos/avalanche.svg" alt="">
+						</span>
+						<span class="select__item-name">Avalanche</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<img src="img/currencies-logos/fantom.svg" alt="">
+						</span>
+						<span class="select__item-name">Fantom</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/harmony.webp" type="image/webp"><img src="img/currencies-logos/harmony.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">Harmony</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/arbitrum.webp" type="image/webp"><img src="img/currencies-logos/arbitrum.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">Arbitrum</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/optimism.webp" type="image/webp"><img src="img/currencies-logos/optimism.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">Optimism</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/fuse.webp" type="image/webp"><img src="img/currencies-logos/fuse.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">Fuse</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/moon-river.webp" type="image/webp"><img src="img/currencies-logos/moon-river.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">MoonRiver</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/cronos.webp" type="image/webp"><img src="img/currencies-logos/cronos.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">Cronos</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/gnosis.webp" type="image/webp"><img src="img/currencies-logos/gnosis.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">Gnosis</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/moon-beam.webp" type="image/webp"><img src="img/currencies-logos/moon-beam.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">MoonBeam</span>
+					</a>
+					<a class="select__item" href="">
+						<span class="select__item-logo">
+							<picture><source srcset="img/currencies-logos/boba.webp" type="image/webp"><img src="img/currencies-logos/boba.png" alt=""></picture>
+						</span>
+						<span class="select__item-name">Boba</span>
+					</a>
+				</div>				
+			</div>
+
+			<button class="wallet-actions-popup__disconnect btn btn_middle btn_outlined-red">
+				<img src="img/close-circle.svg" alt="">
+				Disconnect
+			</button>
 		</div>
 	</div>
 </div>  
@@ -957,10 +1103,12 @@
     
     <header class="header header_inner">
 	<div class="header__content">
-		<button class="header__menu-button"></button>
-		<a href="">
-			<img class="header__logo" src="img/debridges-logo_dark.svg" width="137" height="24" alt="">
-		</a>
+		<div class="header__content-left">
+			<button class="header__menu-button"></button>
+			<a href="">
+				<img class="header__logo" src="img/debridges-logo_dark.svg" width="137" height="24" alt="">
+			</a>
+		</div>		
 		<nav class="header__menu main-menu">
 			<ul>
 				<li class="main-menu__item active">
@@ -1050,7 +1198,7 @@
 		<div class="transfers__content">
 	<div class="transfers__supported">
 		<span class="transfers__supported-title">
-			Supported
+			Supported:
 			<span class="tooltip-cnt">
 				12
 				<div class="tooltip-popup tooltip-popup_white">
@@ -1186,7 +1334,7 @@
 					</div>
 				</div>
 			</span> 
-			protocols and 
+			DEXes and 
 			<span class="tooltip-cnt">
 				2
 				<div class="tooltip-popup tooltip-popup_white" style="width: fit-content; flex-wrap: nowrap;">
@@ -1200,7 +1348,7 @@
 					</div>					
 				</div>
 			</span> 
-			routes				
+			routers				
 		</span>			
 	</div>
 	<form class="transfers-form">
@@ -1214,7 +1362,7 @@
 						<span class="transfers-form__main-input-name">From</span>							
 					</div>
 					<div class="transfers-form__main-input-content">
-						<input type="text" placeholder="0" size="1">
+						<input type="text" placeholder="Enter amount" size="1">
 						<button class="choose-token-button">
 							<div class="choose-token-button__icons">
 								<img class="choose-token-button__icon choose-token-button__icon_token"
@@ -1242,7 +1390,7 @@
 						<span class="transfers-form__main-input-name">To (Estimated)</span>							
 					</div>
 					<div class="transfers-form__main-input-content">
-						<input type="text" placeholder="0" size="1">
+						<input type="text" placeholder="You'll recieve" size="1">
 						<button class="choose-token-button">
 							<div class="choose-token-button__icons">
 								<img class="choose-token-button__icon choose-token-button__icon_token"
@@ -1284,7 +1432,8 @@
 							</span>
 							<span class="swap-details__info-caption">14:53</span>
 							<div class="tooltip-popup">
-								<span>Estimated swap execution time in minutes</span>
+								<span>Estimated&nbsp;swap&nbsp;execution<br>
+								time&nbsp;in&nbsp;minutes</span>
 							</div>
 						</div>
 						<div class="swap-details__info-item tooltip-cnt">
@@ -1292,8 +1441,9 @@
 								<img src="img/gas-icon.svg" alt="">
 							</span>
 							<span class="swap-details__info-caption">$20.93</span>
-							<div class="tooltip-popup">
-								<span>Estimated network fee. 1.218333 MATIC ($1.03)</span>
+							<div class="tooltip-popup tooltip-popup_fee">
+								<span>Estimated network fee:</span>
+								<span>1.218333 MATIC ($1.03)</span>
 							</div>
 						</div>
 						<div class="swap-details__info-item tooltip-cnt">
@@ -1302,7 +1452,7 @@
 							</span>
 							<span class="swap-details__info-caption">1</span>
 							<div class="tooltip-popup">
-								<span>1 transaction</span>
+								<span>1&nbsp;transaction</span>
 							</div>
 						</div>
 					</div>
@@ -1314,7 +1464,7 @@
 						</div>
 						<span>Router</span>
 						<div class="tooltip-popup">
-							<span>Router via LiFi</span>
+							<span>Router&nbsp;via&nbsp;LiFi</span>
 						</div>
 					</div>
 					<div class="swap-details__path-item tooltip-cnt">
@@ -1324,7 +1474,7 @@
 						</div>
 						<span>Bridges</span>
 						<div class="tooltip-popup" style="left: 15px;">
-							<span>Bridge via Connext and Symbyosis</span>
+							<span>Bridge&nbsp;via&nbsp;Connext<br>and&nbsp;Symbyosis</span>
 						</div>
 					</div>
 					<div class="swap-details__path-item tooltip-cnt">
@@ -1333,7 +1483,7 @@
 						</div>
 						<span>DEX</span>
 						<div class="tooltip-popup" style="left: 15px;">
-							<span>Transfer via 1inch</span>
+							<span>Transfer&nbsp;via&nbsp;1inch</span>
 						</div>
 					</div>
 				</div>
@@ -1369,7 +1519,7 @@
 				<span class="loader-dark"></span>
 			</div>
 			<div class="transfers__swaping-tokens">
-				<div class="token-cnt">
+				<div class="token-cnt @@column">
 	<div class="token-cnt__icon">
 		<picture><source srcset="img/tokens-logos/token.webp" type="image/webp"><img class="token-cnt__icon-token" src="img/tokens-logos/token.png" width="32" height="32" alt=""></picture>
 		<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img class="token-cnt__icon-network" src="img/tokens-logos/network.png" width="14" height="14" alt=""></picture>
@@ -1391,7 +1541,7 @@
 					<img class="transfers__arrow" src="img/transfer-arrow.svg" width="24" height="16" alt="">
 				</div>
 				
-				<div class="token-cnt">
+				<div class="token-cnt @@column">
 	<div class="token-cnt__icon">
 		<picture><source srcset="img/tokens-logos/token.webp" type="image/webp"><img class="token-cnt__icon-token" src="img/tokens-logos/token.png" width="32" height="32" alt=""></picture>
 		<picture><source srcset="img/tokens-logos/network.webp" type="image/webp"><img class="token-cnt__icon-network" src="img/tokens-logos/network.png" width="14" height="14" alt=""></picture>
@@ -1431,17 +1581,11 @@
     </main>    
     
     
+    
     <footer class="footer">
 	<div class="wrapper">
 		<div class="footer__container">
-			<div class="telegram-widget">
-	<div class="telegram-widget__icon">
-		<img src="img/telegram-icon-large.svg" alt="">
-	</div>
-	<button class="telegram-widget__close"></button>
-	<span class="telegram-widget__title">Join our Telegram Community</span>
-	<button class="telegram-widget__btn">Join</button>
-</div>
+			
 
 			<div class="footer__left">
 				<span class="footer__copyrights">© 2022 DeBridges. All rights reserved</span>
@@ -1465,7 +1609,7 @@
 </footer>   
   </div>  
 
-  <script src="./js/app.min.js?_v=20221214122319"></script>
+  <script src="./js/app.min.js?_v=20221229180128"></script>
 </body>
 
 </html>
