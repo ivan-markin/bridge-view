@@ -12289,6 +12289,20 @@ fieldset {
     font-size: 14px;
   }
 
+  .tooltip-popup_white {
+    position: fixed;
+    left: 20px;
+    top: 130px;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    width: calc(100vw - 40px);
+  }
+
+  .tooltip-popup_white::after {
+    display: none;
+  }
+
   .page-title {
     font-size: 24px;
     margin: 0 0 25px 0;
