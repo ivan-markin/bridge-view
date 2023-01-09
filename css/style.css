@@ -2938,6 +2938,10 @@ button.swiper-pagination-bullet {
   opacity: 0.5;
 }
 
+.header__cta.btn_middle {
+  min-width: 205px;
+}
+
 .header__menu-button {
   width: 20px;
   height: 14px;
@@ -3460,7 +3464,7 @@ button.swiper-pagination-bullet {
   font-size: 16px;
   font-weight: 800;
   background-color: #003980;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 0 28px;
 }
 
@@ -12070,6 +12074,15 @@ fieldset {
     display: none;
   }
 
+  .header__cta.btn_middle {
+    font-size: 12px;
+    font-weight: 800;
+    height: 32px;
+    min-width: auto;
+    border-radius: 8px;
+    padding: 0 18px;
+  }
+
   .main-menu__item_soon,
   .main-menu__item_new {
     display: -webkit-box;
@@ -13071,6 +13084,41 @@ fieldset {
 @media screen and (max-width: 420px) {
   .wrap {
     padding: 0 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header {
+    padding: 0 16px;
+  }
+
+  .header_inner {
+    height: 62px;
+  }
+
+  .transfers {
+    padding: 25px 16px;
+  }
+
+  .transfers-form__main-input {
+    padding: 8px 12px;
+  }
+
+  .choose-token-button {
+    min-width: 120px;
+    padding: 6px 30px 6px 6px;
+  }
+
+  .swap-details__target {
+    padding: 12px;
+  }
+
+  .swap-details__info {
+    padding: 16px 12px 0 12px;
+  }
+
+  .swap-details__path {
+    padding: 14px 12px 17px 12px;
   }
 }
 
