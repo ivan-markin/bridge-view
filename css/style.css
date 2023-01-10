@@ -7870,7 +7870,7 @@ button.swiper-pagination-bullet {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
 .tokens-list-item {
@@ -7888,6 +7888,7 @@ button.swiper-pagination-bullet {
 
 .tokens-list-item:not(:last-child) {
   border-bottom: 1px solid #F4F6FB;
+  padding-bottom: 16px;
 }
 
 .tokens-list-item__left {
@@ -10941,8 +10942,7 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70px;
-  padding: 24px 35px;
+  padding: 20px 35px;
   position: relative;
   cursor: pointer;
 }
@@ -12452,6 +12452,10 @@ fieldset {
     display: none;
   }
 
+  .search-input {
+    font-size: 14px;
+  }
+
   .content-tabs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -12798,6 +12802,11 @@ fieldset {
     padding: 24px 16px 0;
   }
 
+  .tokens-list-item:not(:last-child) {
+    border: none;
+    padding: 0;
+  }
+
   .tokens-list-item__name {
     font-size: 14px;
   }
@@ -13087,6 +13096,12 @@ fieldset {
   }
 }
 
+@media (max-width: 368px) {
+  .choose-token-popup__tokens-cnt {
+    padding: 0 16px;
+  }
+}
+
 @media (max-width: 360px) {
   .header {
     padding: 0 16px;
@@ -13100,6 +13115,12 @@ fieldset {
     padding: 25px 16px;
   }
 
+  .transfers_proccess,
+  .transfers_success,
+  .transfers_warning {
+    padding: 20px 16px 50px;
+  }
+
   .transfers-form__main-input {
     padding: 8px 12px;
   }
@@ -13107,6 +13128,14 @@ fieldset {
   .choose-token-button {
     min-width: 120px;
     padding: 6px 30px 6px 6px;
+  }
+
+  .choose-token-popup__search {
+    font-size: 12px;
+  }
+
+  .choose-token-popup__all-tokens {
+    gap: 20px;
   }
 
   .swap-details__target {
@@ -13119,6 +13148,22 @@ fieldset {
 
   .swap-details__path {
     padding: 14px 12px 17px 12px;
+  }
+
+  .success-message__links a {
+    font-size: 9px;
+  }
+
+  .faq__container {
+    height: calc(100vh - 190px);
+  }
+
+  .faq__item-header {
+    padding: 12px 30px 12px 20px;
+  }
+
+  .faq__item-close {
+    top: 12px;
   }
 }
 
