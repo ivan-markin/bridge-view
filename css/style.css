@@ -6866,8 +6866,8 @@ button.swiper-pagination-bullet {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.27;
-  -webkit-text-decoration: dotted;
-          text-decoration: dotted;
+  text-decoration: underline;
+  white-space: nowrap;
   color: #0071FF;
   position: absolute;
   left: 50%;
