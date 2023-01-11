@@ -8078,8 +8078,37 @@ button.swiper-pagination-bullet {
   color: #99C6FF;
 }
 
+.choose-wallet-popup__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
 .choose-wallet-popup__title {
-  font-size: 1.25vw;
+  font-size: 24px;
+  margin: 0;
+}
+
+.choose-wallet-popup .steps-list {
+  margin-bottom: 24px;
+}
+
+.choose-wallet-popup__wallet-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  width: 72%;
+  margin: 0 auto;
 }
 
 .choose-wallet-popup__wallet-item {
@@ -8093,28 +8122,13 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid #E7EAEF;
-  border-radius: 0.78vw;
-  height: 2.9vw;
+  border-radius: 18px;
+  height: 66px;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
   background: none;
   cursor: pointer;
-  padding: 0 15px 0 19px;
-}
-
-.choose-wallet-popup__wallet-item::after {
-  content: "";
-  width: 5px;
-  height: 9px;
-  background: url("../../img/arrow-right.svg") no-repeat center;
-  background-size: contain;
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
-}
-
-.choose-wallet-popup__wallet-item:not(:last-of-type) {
-  margin-bottom: 10px;
+  padding: 0 19px;
 }
 
 .choose-wallet-popup__wallet-item img {
@@ -8129,6 +8143,16 @@ button.swiper-pagination-bullet {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+}
+
+.choose-wallet-popup__wallet-list.disabled .choose-wallet-popup__wallet-item {
+  color: rgba(35, 38, 47, 0.15);
+  cursor: auto;
+}
+
+.choose-wallet-popup__wallet-list.disabled .choose-wallet-popup__wallet-item img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .choose-wallet-popup__description {
@@ -8157,7 +8181,11 @@ button.swiper-pagination-bullet {
 }
 
 .choose-wallet-popup .popup__container {
-  width: 23.33vw;
+  width: 90%;
+  max-width: 507px;
+  min-width: auto;
+  min-height: auto;
+  padding: 24px 30px 48px;
 }
 
 .text-link {
@@ -11475,6 +11503,185 @@ button.swiper-pagination-bullet {
           animation: rotate 1.5s linear infinite;
 }
 
+.steps-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  counter-reset: olCounter;
+  padding: 0;
+  margin: 0;
+}
+
+.steps-list li {
+  list-style: none;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.56;
+  padding-left: 38px;
+}
+
+.steps-list li::before {
+  counter-increment: olCounter;
+  content: counter(olCounter);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #E2EBF6;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2F8AF5;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.steps-list li p {
+  margin: 0;
+}
+
+.steps-list li p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.checkbox__input {
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  outline: none;
+}
+
+.checkbox__btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 66, 105, 0.28);
+  -webkit-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.checkbox__input:checked + .checkbox__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-color: var(--primary-blue);
+  background-color: #0078D2;
+}
+
+.checkbox__input:checked + .checkbox__btn::after {
+  content: "";
+  width: 12px;
+  height: 10px;
+  background: url("../../img/checkbox-checked.svg") no-repeat center;
+  background-size: contain;
+}
+
+.checkbox__input:checked + .checkbox__btn:hover {
+  background-color: var(--primary-blue);
+}
+
+.agreement-popup {
+  overflow-y: scroll;
+}
+
+.agreement-popup .popup__container {
+  width: 90%;
+  max-width: 760px;
+  min-width: auto;
+  min-height: auto;
+  -webkit-transform: translateY(0) translateX(-50%);
+      -ms-transform: translateY(0) translateX(-50%);
+          transform: translateY(0) translateX(-50%);
+  top: 60px;
+  padding: 24px 30px 30px;
+}
+
+.agreement-popup .popup__container::before {
+  display: none;
+}
+
+.agreement-popup__header {
+  margin-bottom: 16px;
+}
+
+.agreement-popup__title {
+  margin: 0 auto;
+}
+
+.agreement-popup__subtitle {
+  font-size: 16px;
+  line-height: 1.57;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 24px auto;
+}
+
+.agreement-popup__therms {
+  border-radius: 16px;
+  background: #F5F8FF;
+  padding: 22px 24px 24px;
+  margin-bottom: 24px;
+}
+
+.agreement-popup__therms .marked-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  margin: 0;
+}
+
+.agreement-popup__therms .marked-list li {
+  line-height: 1.625;
+}
+
+.agreement-popup__btn {
+  width: 100%;
+  font-size: 16px;
+}
+
 *,
 *::before,
 *::after {
@@ -12859,7 +13066,11 @@ fieldset {
 
   .choose-wallet-popup__title {
     font-size: 16px;
-    margin-bottom: 16px;
+    margin: 0 auto;
+  }
+
+  .choose-wallet-popup__wallet-list {
+    width: 100%;
   }
 
   .choose-wallet-popup__wallet-item {
@@ -12870,6 +13081,7 @@ fieldset {
   .choose-wallet-popup .popup__container {
     width: 100%;
     min-height: 280px;
+    padding: 30px 22px 24px;
   }
 
   .wallet-actions-popup .popup__container {
@@ -13072,6 +13284,29 @@ fieldset {
 
   .history__section-title {
     font-size: 14px;
+  }
+
+  .agreement-popup .popup__container {
+    width: 100%;
+    height: 100vh;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    overflow-y: scroll;
+    top: 1px;
+  }
+
+  .agreement-popup .popup__close {
+    position: fixed;
+    display: block;
+    width: 13px;
+    height: 13px;
+    background: url("../img/popup-close-button.svg") no-repeat center;
+    background-size: contain;
+    left: auto;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
   }
 
   .container {
