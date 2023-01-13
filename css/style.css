@@ -6593,6 +6593,9 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 26px;
 }
 
@@ -7459,7 +7462,7 @@ button.swiper-pagination-bullet {
 .max-button {
   background: none;
   border: none;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--primary-blue);
   cursor: pointer;
@@ -7467,8 +7470,11 @@ button.swiper-pagination-bullet {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   padding: 0;
-  margin-right: 8px;
+  margin-right: 4px;
 }
 
 .max-button:disabled {
@@ -13608,6 +13614,25 @@ fieldset {
     width: 100%;
   }
 
+  .transfers {
+    padding-top: 12px;
+  }
+
+  .transfers_proccess,
+  .transfers_success,
+  .transfers_warning {
+    padding: 20px 16px 50px;
+  }
+
+  .transfers__supported {
+    margin-bottom: 12px;
+  }
+
+  .transfers__supported-title {
+    max-width: 230px;
+    line-height: 1.43;
+  }
+
   body {
     overflow-x: hidden;
   }
@@ -13636,12 +13661,6 @@ fieldset {
 
   .transfers {
     padding: 25px 16px;
-  }
-
-  .transfers_proccess,
-  .transfers_success,
-  .transfers_warning {
-    padding: 20px 16px 50px;
   }
 
   .transfers-form__main-input {
@@ -13751,11 +13770,6 @@ fieldset {
   .pagination__button::before {
     width: 0.68vw;
     height: 0.625vw;
-  }
-
-  .max-button {
-    font-size: 0.73vw;
-    margin-right: 0.36vw;
   }
 
   .filter-radio__text-input {
